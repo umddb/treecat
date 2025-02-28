@@ -1,0 +1,18 @@
+builder.h
+
+DataView(grow(sizeof(t))).write(tagLittleEndian(t));
+
+countLeadingZeros64(minSize - 1)
+
+decimal128
+
+
+buffer.h
+
+AtomicWord
+
+DataView
+
+errorcodes.h --> have to be generated
+status.h --> bunch of stuff to include
+comment out invariant
