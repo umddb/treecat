@@ -1,0 +1,10 @@
+backend.txn_mgr_version 1
+backend.exec_buf_size 32000
+txnmgrv1.num_partitions 5 
+txnmgrv2.num_partitions 5
+grpc.server_address 0.0.0.0:9876
+grpc.thread_pool_size 16
+backend.db_path /tmp/treetmp
+backend.thread_pool_size 100
+backend.compression snappy
+version_output /tmp/version.txt

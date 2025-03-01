@@ -10,3 +10,4 @@ Main features of the system include:
 * Specialized Architecture (Storage Layout, Concurrency Control etc.) for Hierarchical Data
 
 TreeCat uses RocksDB as the underlying storage engine and BSON as the data format. 
+For the details of compiling TreeCat and running experiments, refer to README.md under experiments.

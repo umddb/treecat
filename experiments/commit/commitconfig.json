@@ -1,0 +1,38 @@
+{ "misc" : { "experimentIters": "200", "experimentTime" : "00:05:00", "latencyOutput" : "/tmp/commit-latency2.json", "summaryOutput" : "/tmp/commit-summary2.json", "treeAddress" : "10.10.1.4:9876" },
+  "iceberg" : "commiticeberg",
+  "tree" : "committree",
+  "hms" : "commithms",
+  "delta" : "commitdelta",
+  "databaseName" : "committree",
+  "tables" : [ 
+    { "name" : "store_sales", 
+      "type" : "fact",    
+      "partitionSchema" : [ { "name" : "ss_sold_date_sk", "type" : "INT", "cardinality" : "date_dim", "clustered" : false } ], 
+      "schema" : [ 
+        { "name" : "ss_sold_time_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_item_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_customer_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_cdemo_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_hdemo_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_addr_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false }, 
+        { "name" : "ss_store_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_promo_sk", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_ticket_number", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_quantity", "type" : "INT", "cardinality" : 1000000, "clustered" : false },
+        { "name" : "ss_wholesale_cost", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_list_price", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_sales_price", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_ext_discount_amt", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_ext_sales_price", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_ext_wholesale_cost", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_ext_list_price", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_ext_tax", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_coupon_amt", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_net_paid", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_net_paid_inc_tax", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false },
+        { "name" : "ss_net_profit", "type" : "DECIMAL", "cardinality" : 9, "clustered" : false }
+    ],
+      "scaling" : { "1G" : 240000, "10G" : 2400000, "100G" : 24000000, "300G" : 72000000, "1T" : 240000000, "3T" : 720000000, "10T" : 2400000000, "30T" : 7200000000, "100T" : 24000000000 }}
+    
+   
+  ] }
